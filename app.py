@@ -14,7 +14,17 @@ def hello_world():  # put application's code here
 
 @app.route('/<int:n>')
 def number(n):
-   if n >
+   if n > random_number:
+       return '<h1>Too High</h1>' \
+              '<img src ="https://media.giphy.com/media/l2SqeBp51QTM1sy6k/giphy.gif" width = 200>'
+   elif n < random_number:
+       return '<h1>Too Low</h1>' \
+              '<img src ="https://media.giphy.com/media/11qBG0k3hCDRCM/giphy.gif" width = 200>'
+   elif n==random_number:
+       return '<h1>Correct!!!!!!!</h1>' \
+              '<img src ="https://media.giphy.com/media/wHB67Zkr63UP7RWJsj/giphy.gif" width = 200>'
+
+
 
 
 if __name__ == '__main__':
